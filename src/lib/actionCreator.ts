@@ -32,7 +32,12 @@ export const createHolochainAsyncAction = <ParamType, ReturnType>(
         holochainAction: true,
         callString
       },
-      payload: params
+      payload: {
+        instance_id : segments[0] ,
+        zome : segments[1] ,
+        function : segments[2] ,
+        params
+      }
     }
   }
 
